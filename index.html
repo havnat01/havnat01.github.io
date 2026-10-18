@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vu Ngoc Minh | Senior Software Engineer & Full-Stack Tech Lead</title>
+  <title>Vu Ngoc Minh | Senior Frontend Engineer & Full-Stack Developer</title>
   <link rel="canonical" href="https://havnat01.github.io/">
   <link rel="icon" type="image/png" href="avatar.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://havnat01.github.io/">
-  <meta property="og:title" content="Vu Ngoc Minh | Senior Software Engineer & Full-Stack Tech Lead">
-  <meta property="og:description" content="Resume and portfolio of Vu Ngoc Minh - Senior Software Engineer with 8+ years of experience specializing in React 16, Angular 11/7+, Java Spring Boot, and Enterprise Architecture.">
+  <meta property="og:title" content="Vu Ngoc Minh | Senior Frontend Engineer & Full-Stack Developer">
+  <meta property="og:description" content="Resume and portfolio of Vu Ngoc Minh - Senior Frontend Engineer with 8+ years of experience specializing in React, TypeScript, Angular, and Enterprise-Grade UI Architecture. Full-Stack capable with Java Spring Boot.">
   <meta property="og:image" content="https://havnat01.github.io/avatar.png">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://havnat01.github.io/">
-  <meta property="twitter:title" content="Vu Ngoc Minh | Senior Software Engineer & Full-Stack Tech Lead">
-  <meta property="twitter:description" content="Resume and portfolio of Vu Ngoc Minh - Senior Software Engineer with 8+ years of experience specializing in React 16, Angular 11/7+, Java Spring Boot, and Enterprise Architecture.">
+  <meta property="twitter:title" content="Vu Ngoc Minh | Senior Frontend Engineer & Full-Stack Developer">
+  <meta property="twitter:description" content="Resume and portfolio of Vu Ngoc Minh - Senior Frontend Engineer with 8+ years of experience specializing in React, TypeScript, Angular, and Enterprise-Grade UI Architecture. Full-Stack capable with Java Spring Boot.">
   <meta property="twitter:image" content="https://havnat01.github.io/avatar.png">
   
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
@@ -61,6 +61,7 @@
       .no-print, 
       nav, 
       #pdf-dropdown-menu,
+      #architecture,
       button { 
         display: none !important; 
       }
@@ -161,11 +162,301 @@
         text-decoration: none !important; 
       }
 
+      /* ================= CENTERED HERO & HEADER IN PRINT ================= */
+      #about {
+        padding: 0.75rem 1rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.75rem !important;
+        border-radius: 0.75rem !important;
+        border: 1px solid #e2e8f0 !important;
+        text-align: center !important;
+      }
+
+      #about > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.45rem !important;
+        text-align: center !important;
+      }
+
+      /* Centered Avatar in Print */
+      #about .relative.shrink-0 {
+        width: 84px !important;
+        height: 84px !important;
+        margin: 0 auto !important;
+      }
+
+      #about .relative.shrink-0 > div:first-child {
+        width: 84px !important;
+        height: 84px !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        margin: 0 auto !important;
+      }
+
+      #about .relative.shrink-0 img {
+        width: 84px !important;
+        height: 84px !important;
+        border-radius: 0.65rem !important;
+        display: block !important;
+        margin: 0 auto !important;
+      }
+
+      /* Hide pulsating available badge in print */
+      #about .relative.shrink-0 .absolute {
+        display: none !important;
+      }
+
+      /* Centered & Compact Personal Info */
+      #about .flex-1 {
+        text-align: center !important;
+        width: 100% !important;
+      }
+
+      #about .flex-1 > div:first-child {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.35rem !important;
+        margin-bottom: 0.15rem !important;
+      }
+
+      #about .flex-1 > div:first-child span {
+        font-size: 7pt !important;
+        padding: 0.08rem 0.4rem !important;
+        line-height: 1.2 !important;
+      }
+
+      #about h1 {
+        font-size: 14pt !important;
+        line-height: 1.15 !important;
+        margin: 0.1rem 0 0.2rem 0 !important;
+        text-align: center !important;
+      }
+
+      #about p {
+        font-size: 7.8pt !important;
+        line-height: 1.32 !important;
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.35rem !important;
+        text-align: center !important;
+        max-width: 96% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Contact items: centered inline row in print */
+      #about .flex-wrap {
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+
+      #about .flex-wrap.gap-3 {
+        gap: 0.15rem 0.55rem !important;
+        padding-top: 0 !important;
+        justify-content: center !important;
+      }
+
+      #about .flex-wrap.gap-3 a,
+      #about .flex-wrap.gap-3 span {
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        font-size: 6.8pt !important;
+        line-height: 1.2 !important;
+      }
+
+      #about .flex-wrap.gap-3 i {
+        width: 9.5px !important;
+        height: 9.5px !important;
+      }
+
+      #about .flex-wrap.gap-3 i[data-lucide="external-link"] {
+        width: 8px !important;
+        height: 8px !important;
+        opacity: 0.7 !important;
+      }
+
+      /* ================= 2-COLUMN CERTIFICATIONS & EDUCATION IN PRINT ================= */
+      #certifications .grid,
+      #education .grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.6rem !important;
+      }
+
+      #certifications .grid > div,
+      #education .grid > div {
+        padding: 0.55rem 0.75rem !important;
+        border-radius: 0.5rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
       /* Default A4 print setup (overridden dynamically in Continuous Mode) */
       @page { 
         size: A4 portrait; 
         margin: 8mm 10mm; 
       }
+    }
+
+    /* Force 2-column layout for Certifications and Education from 540px and up on screen */
+    @media (min-width: 540px) {
+      #certifications .grid,
+      #education .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* ================= CONTINUOUS PDF MEASURING SIMULATION ================= */
+    html.continuous-measuring {
+      font-size: 9.5pt !important;
+      line-height: 1.4 !important;
+      background: #ffffff !important;
+    }
+    html.continuous-measuring,
+    html.continuous-measuring body {
+      background: #ffffff !important;
+    }
+    html.continuous-measuring body {
+      width: 190mm !important;
+      max-width: 190mm !important;
+      font-size: 9.5pt !important;
+      line-height: 1.4 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    html.continuous-measuring main {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flow-root !important;
+    }
+    html.continuous-measuring main > section,
+    html.continuous-measuring main > article,
+    html.continuous-measuring main > div {
+      margin-top: 1rem !important;
+      margin-bottom: 1rem !important;
+    }
+    html.continuous-measuring #architecture,
+    html.continuous-measuring .no-print,
+    html.continuous-measuring nav,
+    html.continuous-measuring #pdf-dropdown-menu,
+    html.continuous-measuring button {
+      display: none !important;
+    }
+    html.continuous-measuring #about {
+      padding: 0.75rem 1rem !important;
+      margin-top: 0 !important;
+      margin-bottom: 0.75rem !important;
+      border-radius: 0.75rem !important;
+      border: 1px solid #e2e8f0 !important;
+      text-align: center !important;
+    }
+    html.continuous-measuring #about > div {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.45rem !important;
+      text-align: center !important;
+    }
+    html.continuous-measuring #about .relative.shrink-0 {
+      width: 84px !important;
+      height: 84px !important;
+      margin: 0 auto !important;
+    }
+    html.continuous-measuring #about .relative.shrink-0 > div:first-child {
+      width: 84px !important;
+      height: 84px !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      margin: 0 auto !important;
+    }
+    html.continuous-measuring #about .relative.shrink-0 img {
+      width: 84px !important;
+      height: 84px !important;
+      border-radius: 0.65rem !important;
+      display: block !important;
+      margin: 0 auto !important;
+    }
+    html.continuous-measuring #about .relative.shrink-0 .absolute {
+      display: none !important;
+    }
+    html.continuous-measuring #about .flex-1 {
+      text-align: center !important;
+      width: 100% !important;
+    }
+    html.continuous-measuring #about .flex-1 > div:first-child {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      margin-bottom: 0.15rem !important;
+    }
+    html.continuous-measuring #about .flex-1 > div:first-child span {
+      font-size: 7pt !important;
+      padding: 0.08rem 0.4rem !important;
+      line-height: 1.2 !important;
+    }
+    html.continuous-measuring #about h1 {
+      font-size: 14pt !important;
+      line-height: 1.15 !important;
+      margin: 0.1rem 0 0.2rem 0 !important;
+      text-align: center !important;
+    }
+    html.continuous-measuring #about p {
+      font-size: 7.8pt !important;
+      line-height: 1.32 !important;
+      margin-top: 0.25rem !important;
+      margin-bottom: 0.35rem !important;
+      text-align: center !important;
+      max-width: 96% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    html.continuous-measuring #about .flex-wrap {
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    html.continuous-measuring #about .flex-wrap.gap-3 {
+      gap: 0.15rem 0.55rem !important;
+      padding-top: 0 !important;
+      justify-content: center !important;
+    }
+    html.continuous-measuring #about .flex-wrap.gap-3 a,
+    html.continuous-measuring #about .flex-wrap.gap-3 span {
+      padding: 0 !important;
+      border: none !important;
+      font-size: 6.8pt !important;
+      line-height: 1.2 !important;
+      background: transparent !important;
+    }
+    html.continuous-measuring #about .flex-wrap.gap-3 i {
+      width: 9.5px !important;
+      height: 9.5px !important;
+    }
+    html.continuous-measuring #about .flex-wrap.gap-3 i[data-lucide="external-link"] {
+      width: 8px !important;
+      height: 8px !important;
+    }
+    html.continuous-measuring #certifications .grid,
+    html.continuous-measuring #education .grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 0.6rem !important;
+    }
+    html.continuous-measuring #certifications .grid > div,
+    html.continuous-measuring #education .grid > div {
+      padding: 0.55rem 0.75rem !important;
+      border-radius: 0.5rem !important;
     }
 
     /* Custom subtle scrollbar */
@@ -282,30 +573,30 @@
   <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16">
 
     <!-- ================= 1. HERO SECTION ================= -->
-    <section id="about" class="relative bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl p-6 sm:p-10 shadow-sm transition-all">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+    <section id="about" class="relative bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 shadow-sm transition-all">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
         
         <!-- Profile Avatar & Availability Badge -->
         <div class="relative shrink-0">
-          <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-purple-600 p-1 shadow-xl">
+          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-purple-600 p-1 shadow-xl">
             <img src="avatar.png" 
                  alt="Vu Ngoc Minh" 
                  class="w-full h-full object-cover rounded-xl bg-slate-100 dark:bg-slate-900" />
           </div>
-          <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-md border-2 border-white dark:border-slate-900">
+          <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-md border-2 border-white dark:border-slate-900 no-print">
             <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
             <span>Available</span>
           </div>
         </div>
 
         <!-- Personal Header Info -->
-        <div class="flex-1 text-center md:text-left space-y-3.5">
-          <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+        <div class="flex-1 text-center sm:text-left space-y-3 sm:space-y-3.5">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
             <span class="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300 border border-brand-200/60 dark:border-brand-800/60">
-              Senior Software Engineer
+              Senior Frontend Engineer
             </span>
             <span class="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-              Full-Stack Tech Lead
+              React &amp; TypeScript Specialist
             </span>
           </div>
 
@@ -314,11 +605,11 @@
           </h1>
 
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
-            Senior Software Engineer with <strong>8+ years of experience</strong> architecting, developing, and delivering scalable enterprise applications. Dual-stack expertise in <strong>Frontend (React 16, Angular 7+, Angular 11, TypeScript)</strong> and <strong>Backend (Java Spring Boot, RESTful Microservices)</strong>. Experienced <strong>Team Lead of 8 engineers</strong> with a track record in <strong>Global Supply Chain Management / Enterprise Logistics</strong> and <strong>Commercial Banking Platforms (Thai Bank Project)</strong>. Certified <strong>Microsoft Agentic AI Solutions Architect Expert</strong> and <strong>Azure AI Apps & Agents Developer Associate</strong>.
+            Senior Frontend Engineer with <strong>8+ years of experience</strong> building high-performance, scalable enterprise web applications. Deep expertise in <strong>React, Next.js, TypeScript, and reusable component-driven architecture</strong> for complex data-intensive UIs. Proven <strong>Team Lead of 8 engineers</strong> delivering mission-critical platforms in <strong>Global Supply Chain / Logistics</strong> and <strong>Commercial Banking (Thai Bank)</strong> domains. Solid full-stack foundation with <strong>Java Spring Boot microservices</strong>. Passionate about <strong>Figma-to-code design implementation, CSS animations</strong>, and AI-augmented developer workflows. Certified <strong>Microsoft Agentic AI Solutions Architect Expert</strong>.
           </p>
 
           <!-- Contact Pills -->
-          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 pt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
             <a href="mailto:vungocminh1692@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 transition">
               <i data-lucide="mail" class="w-4 h-4 text-brand-500"></i>
               <span>vungocminh1692@gmail.com</span>
@@ -327,8 +618,8 @@
               <i data-lucide="phone" class="w-4 h-4 text-brand-500"></i>
               <span>(+84) 98-735-1365</span>
             </a>
-            <a href="https://linkedin.com/in/vu-minh-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 transition">
-              <i data-lucide="linkedin" class="w-4 h-4 text-brand-500"></i>
+            <a href="https://linkedin.com/in/vu-minh-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 transition group">
+              <i data-lucide="link" class="w-4 h-4 text-brand-500"></i>
               <span>linkedin.com/in/vu-minh-dev</span>
             </a>
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">
@@ -351,24 +642,21 @@
         <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wide">Team Lead Capacity</div>
       </div>
       <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-center">
-        <div class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">React & Angular</div>
-        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wide">React 16 • Angular 11/7+</div>
+        <div class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">React & TypeScript</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wide">Core Frontend Stack</div>
       </div>
       <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm text-center">
-        <div class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">Spring Boot</div>
-        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wide">Java Microservices & APIs</div>
+        <div class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">AI-Enhanced</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wide">Development Workflow</div>
       </div>
     </section>
 
     <!-- ================= 3. TECHNICAL SKILLS MATRIX ================= -->
     <section id="skills" class="space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
-        <div>
-          <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
-            <i data-lucide="cpu" class="w-6 h-6 text-brand-600"></i> Technical Expertise
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Comprehensive overview of production-proven competencies.</p>
-        </div>
+        <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
+          <i data-lucide="cpu" class="w-6 h-6 text-brand-600"></i> Technical Expertise
+        </h2>
 
         <!-- Filter tabs for skills (No print) -->
         <div class="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl no-print text-xs font-medium self-start sm:self-auto">
@@ -379,63 +667,55 @@
         </div>
       </div>
 
-      <!-- Skills Cards Grid -->
+      <!-- Skills Cards Grid (3-Column Layout) -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="skills-grid">
         
         <!-- Frontend Card -->
         <div class="skill-card frontend p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
-              <div class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950 flex items-center justify-center text-blue-600">
-                <i data-lucide="layout" class="w-4 h-4"></i>
-              </div>
-              <span>Frontend Engineering</span>
+          <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950 flex items-center justify-center text-blue-600">
+              <i data-lucide="layout" class="w-4 h-4"></i>
             </div>
-            <span class="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">Expert</span>
+            <span>Frontend Engineering</span>
           </div>
           <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2.5">
-            <li><strong class="text-slate-900 dark:text-white">React:</strong> React 16 (16.8+ Hooks, Context API, Lifecycle & Optimization), TypeScript, JavaScript (ES6+).</li>
+            <li><strong class="text-slate-900 dark:text-white">React &amp; Next.js:</strong> React (Hooks, Context API, Performance Optimization), Next.js (App Router, SSR/SSG/ISR), Reusable Component Architecture, TypeScript (Strict), JavaScript (ES6+).</li>
+            <li><strong class="text-slate-900 dark:text-white">State &amp; Data Fetching:</strong> TanStack Query (React Query), Redux Toolkit, Context API, Custom Hooks, Render Profiling &amp; Optimization, Chrome DevTools &amp; Lighthouse.</li>
+            <li><strong class="text-slate-900 dark:text-white">UI Systems &amp; Styling:</strong> Material UI, Tailwind CSS, Bootstrap, Bulma, SASS/CSS3, Responsive Design, CSS Animations &amp; Transitions (Hardware-Accelerated, 60fps Micro-interactions).</li>
+            <li><strong class="text-slate-900 dark:text-white">Design &amp; Prototyping:</strong> Figma to Code (Design Token Handoff, Component Specification, Pixel-Perfect Implementation).</li>
             <li><strong class="text-slate-900 dark:text-white">Angular:</strong> Angular 11, Angular 7+, RxJS Observables, NgRx Store, Reactive Forms, Lazy Loading Modules.</li>
-            <li><strong class="text-slate-900 dark:text-white">State Management:</strong> Redux Toolkit, Context API, Custom Hooks, RxJS Subjects, Client Caching.</li>
-            <li><strong class="text-slate-900 dark:text-white">Data Grids & UI:</strong> Custom Enterprise Spreadsheet Components, High-density Data Grids, Web Components, SASS/CSS3, HTML5.</li>
           </ul>
         </div>
 
         <!-- Backend & APIs Card -->
         <div class="skill-card backend p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
-              <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center text-emerald-600">
-                <i data-lucide="server" class="w-4 h-4"></i>
-              </div>
-              <span>Backend & APIs</span>
+          <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center text-emerald-600">
+              <i data-lucide="server" class="w-4 h-4"></i>
             </div>
-            <span class="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Advanced</span>
+            <span>Backend & APIs</span>
           </div>
           <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2.5">
             <li><strong class="text-slate-900 dark:text-white">Java Spring Boot:</strong> Spring MVC, Spring Data JPA, Hibernate, Spring Security, RESTful Microservices.</li>
             <li><strong class="text-slate-900 dark:text-white">Other Backends:</strong> PHP (Laravel framework for CRM/ERP systems), Node.js (Express basics).</li>
             <li><strong class="text-slate-900 dark:text-white">Databases:</strong> PostgreSQL, MySQL, Redis (caching), Relational Schema Design & Query Optimization.</li>
-            <li><strong class="text-slate-900 dark:text-white">API Integration:</strong> Contract-First REST APIs, OpenAPI/Swagger Documentation, Centralized API Gateway Integration.</li>
+            <li><strong class="text-slate-900 dark:text-white">API & Security:</strong> Contract-First REST APIs, CORS Configuration, JWT Bearer Token Auth, SAML 2.0 SSO, Azure AD, OAuth2/OIDC.</li>
           </ul>
         </div>
 
-        <!-- Architecture, AI & Cloud Card -->
+        <!-- Architecture, Testing & DevOps Card -->
         <div class="skill-card architecture p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
-              <div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950 flex items-center justify-center text-purple-600">
-                <i data-lucide="layers" class="w-4 h-4"></i>
-              </div>
-              <span>AI, Cloud & DevOps</span>
+          <div class="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
+            <div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950 flex items-center justify-center text-purple-600">
+              <i data-lucide="layers" class="w-4 h-4"></i>
             </div>
-            <span class="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">Proficient</span>
+            <span>Architecture, Testing &amp; DevOps</span>
           </div>
           <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2.5">
-            <li><strong class="text-slate-900 dark:text-white">AI & Agentic Systems:</strong> Agentic AI Solutions Architecture, Azure AI Apps & Agents, GitHub Copilot.</li>
-            <li><strong class="text-slate-900 dark:text-white">Security & Identity:</strong> SAML 2.0 SSO, Azure Active Directory (Azure AD), OAuth2, JWT Bearer Token Security.</li>
-            <li><strong class="text-slate-900 dark:text-white">Cloud & DevOps:</strong> AWS (ECS, S3, CloudFront), Docker Containerization, Jenkins CI/CD Pipelines, Git.</li>
-            <li><strong class="text-slate-900 dark:text-white">Testing & Quality:</strong> Karma & Jasmine (Angular), Jest, React Testing Library, Code Reviews, Clean Code.</li>
+            <li><strong class="text-slate-900 dark:text-white">Testing &amp; Quality:</strong> Playwright (E2E Testing), Jest + React Testing Library (User-Centric Testing), Karma &amp; Jasmine (Angular), Automated CI Test Pipelines, Clean Code.</li>
+            <li><strong class="text-slate-900 dark:text-white">Build &amp; Modern Tooling:</strong> Vite (ESM-first Dev Server), Webpack Build Pipelines, Turborepo &amp; pnpm Workspaces, Git (Feature Branching, Interactive Rebasing, Code Reviews).</li>
+            <li><strong class="text-slate-900 dark:text-white">AI &amp; Agentic Systems:</strong> Agentic AI Solutions Architecture, Azure AI Apps &amp; Agents, GitHub Copilot, AI-Augmented Development Workflows (MCP, AI Rules, Jira Automation).</li>
+            <li><strong class="text-slate-900 dark:text-white">Cloud &amp; CI/CD:</strong> AWS (ECS, S3, CloudFront), Docker Containerization, Jenkins CI/CD Pipelines.</li>
           </ul>
         </div>
 
@@ -448,7 +728,6 @@
         <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
           <i data-lucide="briefcase" class="w-6 h-6 text-brand-600"></i> Professional Work Experience
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Track record of leadership, full-stack implementation, and technical delivery.</p>
       </div>
 
       <div class="space-y-8">
@@ -458,7 +737,7 @@
           <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-4 mb-4">
             <div>
               <div class="flex items-center gap-2">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Full Stack Developer / Team Lead</h3>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Frontend Engineer / Full-Stack Team Lead</h3>
                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Current</span>
               </div>
               <div class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
@@ -478,31 +757,33 @@
           <!-- Key Responsibilities & Achievements -->
           <ul class="list-disc list-outside pl-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
             <li>
-              <strong class="text-slate-900 dark:text-white">Team Leadership & Delivery:</strong> Supervised a cross-functional squad of <strong>8 developers</strong> (Frontend & Backend); managed sprint scopes, technical design discussions, code quality reviews, and on-schedule release deliveries.
+              <strong class="text-slate-900 dark:text-white">Team Leadership & Delivery:</strong> Supervised a cross-functional squad of <strong>8 developers</strong> (Frontend & Backend); managed sprint scopes, led frontend architectural reviews, conducted rigorous code reviews, and ensured on-schedule release deliveries.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Full-Stack Application Development:</strong> Architected and built domain-specific Single Page Applications using <strong>React 16 (Hooks & Context API) with TypeScript</strong> on the frontend, integrating seamlessly with containerized <strong>Java Spring Boot microservices</strong> hosted on AWS ECS via a centralized API Gateway.
+              <strong class="text-slate-900 dark:text-white">Shared UI Component Library &amp; Architecture:</strong> Architected a domain-driven component hierarchy and designed a shared, highly reusable UI component library across 5+ operational SPAs (Order, Master Data, Cost, Production Plan, Transport); enforced strict TypeScript contracts and design token consistency, eliminating code redundancy across cross-functional squads.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">High-Density Enterprise Grid Engineering:</strong> Developed and optimized custom interactive spreadsheet components capable of handling high-volume order data, dirty-cell tracking, multi-cell clipboard operations, and real-time client-side Excel validation.
+              <strong class="text-slate-900 dark:text-white">Complex Data Interfaces &amp; Batch Operations:</strong> Developed interactive, data-dense interfaces handling large-scale order entry, dirty-state change tracking, multi-cell clipboard operations, and real-time client-side validation using Web Workers for background compute.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Performance Tuning & Caching:</strong> Eliminated memory leaks and sluggish re-renders in data-intensive screens through component memoization, granular hook-based state management, and optimized session storage caching.
+              <strong class="text-slate-900 dark:text-white">React Performance &amp; Lifecycle Optimization:</strong> Diagnosed and resolved rendering bottlenecks using React DevTools and Chrome Performance profiler; eliminated re-render cascades via granular hook abstractions, component memoization, and session caching layers.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Enterprise Identity & Security:</strong> Implemented single sign-on (SSO) authentication using SAML 2.0 with Azure Active Directory (Azure AD), ensuring secure session propagation across independent enterprise domains.
+              <strong class="text-slate-900 dark:text-white">AI-Augmented Development Workflow:</strong> Championed modern AI developer workflows (GitHub Copilot, MCP rules for Jira integration), accelerating issue analysis, test generation, and team sprint velocity.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Engineering Mentorship:</strong> Guided and mentored junior engineers on coding best practices, clean design patterns, and debugging methodologies, fostering sustained team productivity.
+              <strong class="text-slate-900 dark:text-white">Enterprise Identity &amp; Security:</strong> Implemented single sign-on (SSO) authentication using SAML 2.0 with Azure Active Directory (Azure AD), ensuring secure session propagation, scoped JWT Bearer auth, and token rotation.
             </li>
           </ul>
 
           <!-- Tech Stack Tags -->
           <div class="flex flex-wrap gap-1.5 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Shared UI Library</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">React 16 (Hooks)</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">TypeScript</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Performance Profiling</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Web Workers</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Java Spring Boot</span>
-            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Custom Spreadsheet Grid</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Centralized API Gateway</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">AWS ECS</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">SAML SSO / Azure AD</span>
@@ -532,19 +813,19 @@
           <!-- Key Responsibilities & Achievements -->
           <ul class="list-disc list-outside pl-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
             <li>
-              <strong class="text-slate-900 dark:text-white">Core Banking Frontend:</strong> Spearheaded the development of dynamic and responsive banking web applications using <strong>Angular 11 and TypeScript</strong>, significantly enhancing customer experience for banking clients.
+              <strong class="text-slate-900 dark:text-white">Core Banking Frontend &amp; Figma Translation:</strong> Spearheaded the development of dynamic and responsive banking web applications using <strong>Angular 11 and TypeScript</strong>; collaborated closely with UI/UX designers to translate <strong>Figma design specifications</strong> into accessible, pixel-perfect interfaces with fluid CSS animations and micro-interactions.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Reactive State & Asynchronous Data:</strong> Orchestrated complex financial data flows with <strong>RxJS Observables and NgRx store</strong>, handling asynchronous transaction inquiries, request debouncing, and predictable client-side caching.
+              <strong class="text-slate-900 dark:text-white">Reactive State &amp; Asynchronous Data:</strong> Orchestrated complex financial data flows with <strong>RxJS Observables and NgRx store</strong>, handling asynchronous transaction inquiries, request debouncing, and predictable client-side caching.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Backend Integration:</strong> Collaborated with the <strong>Java Spring Boot backend engineering team</strong> to establish strict RESTful API contracts, enforce role-based authorization, and ensure high data integrity across financial operations.
+              <strong class="text-slate-900 dark:text-white">Backend Integration &amp; Security:</strong> Collaborated with the <strong>Java Spring Boot backend engineering team</strong> to establish strict RESTful API contracts, enforce role-based access control (RBAC), and handle secure JWT bearer token authentication.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Dynamic Form Engine:</strong> Built reusable UI components and dynamic reactive forms with multi-tier validation, streamlining corporate account management and fund transfers.
+              <strong class="text-slate-900 dark:text-white">Dynamic Form Engine &amp; Reusable Component Suite:</strong> Built a modular, reusable UI component suite and dynamic reactive forms with multi-tier validation, streamlining corporate account management and fund transfers across modules.
             </li>
             <li>
-              <strong class="text-slate-900 dark:text-white">Automated Testing & Security Compliance:</strong> Authored automated unit test suites using <strong>Karma and Jasmine</strong> (>80% coverage), participating in code reviews and security audits to maintain zero high-severity vulnerabilities.
+              <strong class="text-slate-900 dark:text-white">Automated Testing &amp; Security Compliance:</strong> Authored automated unit test suites using <strong>Karma and Jasmine</strong> (>80% coverage), participating in code reviews, pen-test remediations, and security audits to maintain zero high-severity vulnerabilities.
             </li>
           </ul>
 
@@ -552,11 +833,14 @@
           <div class="flex flex-wrap gap-1.5 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Angular 11</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">TypeScript</span>
-            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">RxJS & NgRx</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Figma to Code</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">CSS Animations</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">RxJS &amp; NgRx</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Java Spring Boot APIs</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">JWT Auth &amp; RBAC</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Karma / Jasmine</span>
             <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Banking Security</span>
-            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Docker & Jenkins</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Docker &amp; Jenkins</span>
           </div>
         </article>
 
@@ -631,7 +915,7 @@
     </section>
 
     <!-- ================= 5. TECHNICAL ARCHITECTURE SHOWCASE ================= -->
-    <section id="architecture" class="space-y-6 page-break-avoid">
+    <section id="architecture" class="space-y-6 page-break-avoid no-print">
       <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
         <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300 mb-1">
           Senior Engineering Deep Dive
@@ -639,22 +923,21 @@
         <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
           <i data-lucide="network" class="w-6 h-6 text-brand-600"></i> Architecture & Engineering Highlights
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Selected system architecture problems and engineering solutions delivered in production.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 
-        <!-- Case 1: High-Density Data Grid -->
+        <!-- Case 1: Complex Data Interfaces & Batch Operations -->
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-3">
           <div class="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center text-blue-600">
             <i data-lucide="table" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-base text-slate-900 dark:text-white">High-Density Enterprise Data Grid</h3>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white">Complex Data Interfaces &amp; Batch Operations</h3>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Solved severe browser latency in complex PO allocation screens by implementing windowed DOM rendering, dirty-state mutation tracking, and background processing for client-side Excel parsing.
+            Solved browser performance bottlenecks in complex order processing screens by implementing efficient DOM rendering, dirty-state mutation tracking, and background processing for client-side data parsing.
           </p>
           <div class="pt-2 text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">
-            React 16 &bull; Custom Spreadsheet &bull; Web Workers
+            React 16 &bull; Web Workers &bull; Performance Tuning
           </div>
         </div>
 
@@ -689,152 +972,105 @@
       </div>
     </section>
 
-    <!-- ================= 6. CERTIFICATIONS & EDUCATION ================= -->
-    <section id="certifications" class="space-y-8 page-break-avoid">
-      
-      <!-- Certifications Card -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-6">
-        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
-          <h2 class="text-xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
-            <i data-lucide="award" class="w-6 h-6 text-brand-600"></i> Verified Professional Certifications
-          </h2>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300 no-print">
-            Verified Credentials
-          </span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          
-          <!-- Cert 1: Microsoft Agentic AI Architect -->
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div class="flex items-start justify-between gap-2">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
-                  <i data-lucide="sparkles" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug">
-                    Microsoft Certified: Agentic AI Business Solutions Architect Expert
-                  </h3>
-                  <div class="text-xs text-slate-500 font-medium mt-0.5">Microsoft &bull; Issued Sep 2026</div>
-                </div>
-              </div>
-            </div>
-            <div class="text-xs text-slate-600 dark:text-slate-400">
-              Credential ID: <span class="font-mono text-[11px]">3BE14B37E1076EAA</span> &bull; Cert: <span class="font-mono text-[11px]">59B1LB-3B2453</span>
-            </div>
-            <div class="pt-1">
-              <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/3be14b37e1076eaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
-                <span>Verify Credential</span>
-                <i data-lucide="external-link" class="w-3 h-3"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 2: Microsoft Azure AI Developer Associate -->
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div class="flex items-start justify-between gap-2">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 shrink-0 mt-0.5">
-                  <i data-lucide="bot" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug">
-                    Microsoft Certified: Azure AI Apps and Agents Developer Associate
-                  </h3>
-                  <div class="text-xs text-slate-500 font-medium mt-0.5">Microsoft &bull; Issued Jul 2026</div>
-                </div>
-              </div>
-            </div>
-            <div class="text-xs text-slate-600 dark:text-slate-400">
-              Credential ID: <span class="font-mono text-[11px]">18BD1F0D35E32C98</span> &bull; Cert: <span class="font-mono text-[11px]">AA54E6-9E2A9Z</span>
-            </div>
-            <div class="pt-1">
-              <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/18bd1f0d35e32c98" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
-                <span>Verify Credential</span>
-                <i data-lucide="external-link" class="w-3 h-3"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 3: GitHub Copilot -->
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div class="flex items-start justify-between gap-2">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center text-emerald-600 shrink-0 mt-0.5">
-                  <i data-lucide="code-2" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug">
-                    GitHub Copilot Certified
-                  </h3>
-                  <div class="text-xs text-slate-500 font-medium mt-0.5">Microsoft / GitHub &bull; Issued May 2026</div>
-                </div>
-              </div>
-            </div>
-            <div class="text-xs text-slate-600 dark:text-slate-400">
-              Credential ID: <span class="font-mono text-[11px]">5319CCC6DF385E06</span> &bull; Cert: <span class="font-mono text-[11px]">AA42DF-5456EA</span>
-            </div>
-            <div class="pt-1">
-              <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/5319ccc6df385e06" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
-                <span>Verify Credential</span>
-                <i data-lucide="external-link" class="w-3 h-3"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 4 & 5: Senior React & Senior Angular -->
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 space-y-3">
-            <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-950 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
-                <i data-lucide="check-circle" class="w-4 h-4"></i>
-              </div>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug">
-                  Senior React Developer
-                </h3>
-                <div class="text-xs text-slate-500 font-medium">Udacity &bull; Issued Jul 2022</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 border-t border-slate-200 dark:border-slate-700/60 pt-2.5">
-              <div class="w-8 h-8 rounded-lg bg-red-100 dark:bg-red-950 flex items-center justify-center text-red-600 shrink-0 mt-0.5">
-                <i data-lucide="check-circle" class="w-4 h-4"></i>
-              </div>
-              <div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug">
-                  Senior Angular Developer
-                </h3>
-                <div class="text-xs text-slate-500 font-medium">Certificates.dev &bull; Issued Jun 2022</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Education Card -->
-      <div id="education" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-5">
-        <h2 class="text-xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3">
-          <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-600"></i> Education
+    <!-- ================= 6. CERTIFICATIONS ================= -->
+    <section id="certifications" class="space-y-6 page-break-avoid">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+        <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
+          <i data-lucide="award" class="w-6 h-6 text-brand-600"></i> Verified Professional Certifications
         </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-700/40">
-            <div class="font-bold text-slate-900 dark:text-white text-base">Ho Chi Minh City University of Science (HCMUS)</div>
-            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Bachelor of Science in Software Engineering</div>
-            <div class="text-xs text-slate-500 font-mono mt-1">Graduated: Nov 2020</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-700/40">
-            <div class="font-bold text-slate-900 dark:text-white text-base">Ho Chi Minh City University of Industry & Trade (HUIT)</div>
-            <div class="text-sm font-semibold text-slate-600 dark:text-slate-300">Bachelor of Science in Chemical Engineering</div>
-            <div class="text-xs text-slate-500 font-mono mt-1">Graduated: Oct 2014</div>
-          </div>
-        </div>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300 no-print">
+          Verified Credentials
+        </span>
       </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Cert 1: Microsoft Agentic AI Architect -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-base">Microsoft Certified: Agentic AI Business Solutions Architect Expert</div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Microsoft</div>
+            <div class="text-xs text-slate-500 font-mono mt-1">Issued: Sep 2026 &bull; Credential ID: 3BE14B37E1076EAA &bull; Cert: 59B1LB-3B2453</div>
+          </div>
+          <div>
+            <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/3be14b37e1076eaa" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              Verify Credential &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 2: Microsoft Azure AI Developer Associate -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-base">Microsoft Certified: Azure AI Apps and Agents Developer Associate</div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Microsoft</div>
+            <div class="text-xs text-slate-500 font-mono mt-1">Issued: Jul 2026 &bull; Credential ID: 18BD1F0D35E32C98 &bull; Cert: AA54E6-9E2A9Z</div>
+          </div>
+          <div>
+            <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/18bd1f0d35e32c98" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              Verify Credential &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 3: GitHub Copilot Certified -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-base">GitHub Copilot Certified</div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Microsoft / GitHub</div>
+            <div class="text-xs text-slate-500 font-mono mt-1">Issued: May 2026 &bull; Credential ID: 5319CCC6DF385E06 &bull; Cert: AA42DF-5456EA</div>
+          </div>
+          <div>
+            <a href="https://learn.microsoft.com/en-us/users/minhvn4/credentials/5319ccc6df385e06" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              Verify Credential &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 4: Senior React Developer -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-base">Senior React Developer</div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Udacity</div>
+            <div class="text-xs text-slate-500 font-mono mt-1">Issued: Jul 2022</div>
+          </div>
+        </div>
+
+        <!-- Cert 5: Senior Angular Developer -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-base">Senior Angular Developer</div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Certificates.dev</div>
+            <div class="text-xs text-slate-500 font-mono mt-1">Issued: Jun 2022</div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- ================= 7. FOOTER & CONTACT CALL-TO-ACTION ================= -->
+    <!-- ================= 7. EDUCATION ================= -->
+    <section id="education" class="space-y-6 page-break-avoid">
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+        <h2 class="text-2xl font-bold flex items-center gap-2.5 text-slate-900 dark:text-white">
+          <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-600"></i> Education
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm">
+          <div class="font-bold text-slate-900 dark:text-white text-base">Ho Chi Minh City University of Science (HCMUS)</div>
+          <div class="text-sm font-semibold text-brand-600 dark:text-brand-400">Bachelor of Science in Software Engineering</div>
+          <div class="text-xs text-slate-500 font-mono mt-1">Graduated: Nov 2020</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm">
+          <div class="font-bold text-slate-900 dark:text-white text-base">Ho Chi Minh City University of Industry & Trade (HUIT)</div>
+          <div class="text-sm font-semibold text-slate-600 dark:text-slate-300">Bachelor of Science in Chemical Engineering</div>
+          <div class="text-xs text-slate-500 font-mono mt-1">Graduated: Oct 2014</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. FOOTER & CONTACT CALL-TO-ACTION ================= -->
     <footer class="text-center pt-8 border-t border-slate-200 dark:border-slate-800 no-print space-y-4">
       <div class="flex items-center justify-center gap-4 text-sm font-semibold">
         <a href="mailto:vungocminh1692@gmail.com" class="text-brand-600 hover:text-brand-700 dark:text-brand-400 transition flex items-center gap-1.5">
@@ -945,10 +1181,17 @@
       const skillCards = document.querySelectorAll('.skill-card');
       skillCards.forEach(c => c.style.display = 'block');
 
-      // Calculate total height in mm with safety margins
-      // At standard 96 DPI: 1 px ≈ 0.264583 mm
-      const scrollHeightPx = main.scrollHeight;
-      const totalHeightMm = Math.ceil((scrollHeightPx * 25.4) / 96) + 40;
+      // Temporarily apply measuring class to <html> so rem units are computed under 9.5pt
+      document.documentElement.classList.add('continuous-measuring');
+      // Synchronous reflow measurement under print-equivalent width and font styles
+      const renderedHeightPx = main.getBoundingClientRect().height;
+      document.documentElement.classList.remove('continuous-measuring');
+
+      // Convert px to mm (standard 96 DPI: 1 px ≈ 0.264583 mm)
+      // Top margin: 8mm, Bottom margin: 8mm -> total margins = 16mm.
+      // Cushion: +12mm safety buffer to absorb print engine font kerning differences and strictly prevent breaking Education to page 2
+      const contentHeightMm = Math.ceil((renderedHeightPx * 25.4) / 96);
+      const totalHeightMm = contentHeightMm + 50;
 
       let styleEl = document.getElementById('continuous-print-style');
       if (!styleEl) {
@@ -963,14 +1206,18 @@
             size: 210mm ${totalHeightMm}mm !important;
             margin: 8mm 10mm !important;
           }
-          * {
+          section, article, div, p, ul, li, .page-break-avoid, .break-inside-avoid, * {
             break-inside: auto !important;
             page-break-inside: auto !important;
+            break-before: auto !important;
+            page-break-before: auto !important;
             break-after: auto !important;
             page-break-after: auto !important;
           }
           main {
-            padding-bottom: 20mm !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+            display: flow-root !important;
           }
         }
       `;
