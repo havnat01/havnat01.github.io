@@ -66,8 +66,8 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 |---|---|
 | **Frontend Engineering** | **React & Next.js** (Hooks, Context API, Performance Optimization, App Router, SSR/SSG/ISR), Reusable Component Architecture, TypeScript (Strict), JavaScript (ES6+), **Angular** (Angular 11, Angular 7+, 8, 9), RxJS Observables, NgRx Store |
 | **State & Data Fetching** | **TanStack Query (React Query)**, Redux Toolkit, Context API, Custom Hooks, Render Profiling & Optimization, Chrome DevTools & Lighthouse |
-| **UI Systems & Design** | **Figma to Code** (Design Token Handoff, Pixel-Perfect Implementation), **CSS Animations & Transitions** (60fps Micro-interactions), Material UI, Tailwind CSS, Bootstrap, Bulma, SASS/CSS3, Responsive Web Design |
-| **Testing & Quality** | **Playwright** (E2E Testing), **Jest**, **React Testing Library** (User-Centric Testing), Karma & Jasmine (Angular), Automated CI Test Pipelines, Clean Code |
+| **UI Systems & Design** | **Figma to Code** (Design Token Handoff, Pixel-Perfect Implementation), **CSS Animations & Transitions** (60fps Micro-interactions), **Multilingual UI (i18n / Localization)**, Material UI, Tailwind CSS, Bootstrap, Bulma, SASS/CSS3, Responsive Web Design |
+| **Testing & Quality** | **Jest & React Testing Library** (User-Centric Testing), **MSW (Mock Service Worker)** for network-level API mocking, **Playwright** (E2E Testing), Karma & Jasmine (Angular), Automated CI Test Pipelines, Clean Code |
 | **Build & Tooling** | **Vite** (ESM Dev Server), Webpack Build Pipelines, **Turborepo & pnpm Workspaces**, Git (Feature Branching, Interactive Rebasing, Code Reviews) |
 | **Backend & APIs** | **Java Spring Boot** (Spring MVC, Spring Security, Spring Data JPA), RESTful APIs, Hibernate, Contract-First API, CORS, Laravel (PHP), Node.js |
 | **Bảo mật & Danh tính** | SAML 2.0 SSO, Azure Active Directory (Azure AD), OAuth2/OIDC, JWT Bearer Token Security, Role-Based Access Control (RBAC) |
@@ -82,14 +82,14 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 **Thời gian:** 06/2022 – Hiện tại  
 **Dự án:** Multinational Logistics & Supply Chain Management Enterprise System  
 **Khách hàng/Quy mô:** Hệ thống quản lý chuỗi cung ứng & logistics toàn cầu xử lý hàng trăm nghìn giao dịch PO/DO, lập kế hoạch sản xuất và vận chuyển quốc tế.  
-**Tech Stack:** Shared UI Library, React 16 (Hooks, Context), TypeScript, Performance Profiling, Web Workers, Java Spring Boot (Microservices trên AWS ECS), Centralized API Gateway, SAML 2.0 / Azure AD SSO, Docker, Jenkins.
+**Tech Stack:** Shared UI Library, React 16 (Hooks, Context), TypeScript, Jest & MSW, Performance Profiling, Web Workers, Java Spring Boot (Microservices trên AWS ECS), Centralized API Gateway, SAML 2.0 / Azure AD SSO, Docker, Jenkins.
 
 - **Trách nhiệm & Đóng góp chính:**
   - **Quản lý & Dẫn dắt Kỹ thuật:** Giữ vai trò Team Lead dẫn dắt 8 kỹ sư phát triển (Frontend & Backend), phân bổ công việc theo Scrum/Agile, chủ trì đánh giá kiến trúc frontend, thực hiện code review nghiêm ngặt và đảm bảo tiến độ release.
   - **Hệ thống Thư viện Giao diện Dùng chung (Shared UI Component Library):** Thiết kế kiến trúc component dạng mô-đun và xây dựng thư viện UI component dùng chung có tính tái sử dụng cao cho 5+ phân hệ SPA độc lập (Order, Master Data, Cost, Production Plan, Transport); chuẩn hóa TypeScript props và design tokens, giảm thiểu trùng lặp mã nguồn và rút ngắn thời gian bàn giao tính năng mới.
   - **Giao diện Dữ liệu Phức tạp & Thao tác Hàng loạt (Complex Data Interfaces & Batch Operations):** Phát triển và tối ưu giao diện nhập liệu xử lý tập dữ liệu lớn, tính toán dirty cell, copy-paste nhiều ô, validate nghiệp vụ đơn hàng phức tạp; ứng dụng Web Workers cho các tác vụ phân tích dữ liệu nặng ở background.
   - **Tối ưu hóa Hiệu năng React & Bộ nhớ:** Đo kiểm và khắc phục triệt để tình trạng nghẽn render bằng React DevTools và Chrome Performance profiler; loại bỏ re-render thừa bằng memoization, custom hooks dạng hạt và cơ chế session storage cache.
-  - **Quy trình Phát triển Tăng cường bởi AI (AI-Augmented Workflow):** Tiên phong ứng dụng các công cụ AI (GitHub Copilot, MCP rules kết nối Jira issue automation), đẩy nhanh tốc độ phân tích bug, viết unit test và nâng cao năng suất toàn team.
+  - **Kiểm thử Tự động & Quy trình Tăng cường bởi AI (Jest, MSW & AI Workflows):** Xây dựng bộ unit & integration tests cho các component React sử dụng **Jest & React Testing Library**, kết hợp **MSW (Mock Service Worker)** để mock mạng API độc lập; tiên phong ứng dụng các công cụ AI (GitHub Copilot, MCP rules kết nối Jira issue automation), đẩy nhanh tốc độ phân tích bug, viết test và nâng cao năng suất toàn team.
   - **Bảo mật & Tích hợp Doanh nghiệp:** Tích hợp xác thực Single Sign-On (SAML 2.0 / Azure AD), bảo đảm an toàn luân chuyển JWT Bearer token và quản lý phiên làm việc bảo mật qua API Gateway.
 
 ---
@@ -98,13 +98,13 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 **Thời gian:** 12/2020 – 06/2022  
 **Dự án:** Thai Bank Enterprise Banking Web Platform (Ngân hàng Thái Lan)  
 **Khách hàng/Quy mô:** Ngân hàng thương mại hàng đầu tại Thái Lan; nền tảng phục vụ giao dịch trực tuyến, quản lý tài khoản doanh nghiệp với yêu cầu an toàn thông tin cao.  
-**Tech Stack:** Angular 11, TypeScript, Figma to Code, CSS Animations, RxJS, NgRx, Java Spring Boot APIs, JWT Auth & RBAC, Karma/Jasmine, Docker, Jenkins CI/CD.
+**Tech Stack:** Angular 11, TypeScript, Figma to Code, CSS Animations, i18n / Multilingual UI, RxJS, NgRx, Java Spring Boot APIs, JWT Auth & RBAC, Karma/Jasmine, Docker, Jenkins CI/CD.
 
 - **Trách nhiệm & Đóng góp chính:**
   - **Kiến trúc Giao diện Ngân hàng Lõi & Hiện thực hóa Figma (Figma to Code):** Trực tiếp xây dựng các phân hệ giao diện người dùng ngân hàng bằng **Angular 11, TypeScript**; phối hợp chặt chẽ với đội ngũ thiết kế chuyển đổi bản vẽ **Figma** thành giao diện chuẩn xác, bổ sung hiệu ứng chuyển động **CSS animations & micro-interactions** mượt mà, đạt chuẩn accessibility và an toàn thông tin.
   - **Quản lý Dòng Dữ liệu Bất đồng bộ (Reactive State):** Ứng dụng **RxJS & NgRx store** để xử lý các luồng dữ liệu giao dịch tài chính, caching danh mục dữ liệu, debounce request và duy trì tính nhất quán trên toàn bộ ứng dụng.
   - **Tích hợp Backend & Bảo mật Hợp đồng API:** Phối hợp định dạng RESTful API contract với backend Java Spring Boot, xử lý phân quyền người dùng (Role-Based Access Control) và xác thực token JWT an toàn.
-  - **Dynamic Form Engine & Thư viện Thành phần Tái sử dụng:** Thiết kế hệ thống component tái sử dụng và form động có khả năng validate real-time nhiều tầng cho các giao dịch chuyển tiền và quản lý tài khoản doanh nghiệp.
+  - **Dynamic Form Engine, Đa ngôn ngữ (i18n) & Thư viện Thành phần Tái sử dụng:** Thiết kế hệ thống component tái sử dụng, form động có khả năng validate real-time nhiều tầng và tích hợp hệ thống **Đa ngôn ngữ (Multilingual UI / i18n)** hỗ trợ chuyển đổi linh hoạt tiếng Thái và tiếng Anh cho các giao dịch chuyển tiền và quản lý tài khoản doanh nghiệp.
   - **Kiểm thử Tự động & Tuân thủ Bảo mật:** Thiết lập bộ kiểm thử tự động với Karma & Jasmine đạt độ bao phủ code cao (>80%), tham gia code review, rà soát an toàn thông tin và khắc phục lỗ hổng pen-test đạt chuẩn ngân hàng.
 
 ---
