@@ -47,6 +47,7 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 - **Điện thoại:** (+84) 98-735-1365
 - **Email:** vungocminh1692@gmail.com
 - **LinkedIn:** [linkedin.com/in/vu-minh-dev](https://linkedin.com/in/vu-minh-dev)
+- **Website/Portfolio:** [https://havnat01.github.io/](https://havnat01.github.io/)
 - **Địa điểm:** TP. Hồ Chí Minh, Việt Nam
 - **Trạng thái:** Sẵn sàng cho cơ hội mới (Open to work / Full-time / Remote / Hybrid)
 
