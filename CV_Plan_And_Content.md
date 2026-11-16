@@ -33,7 +33,7 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 | **Dự án Ngân hàng (12/2020 - 6/2022)** | **Thai Bank Enterprise Banking Web Platform (Ngân hàng Thái Lan)**. Vị trí: **Senior Frontend Developer**. Tech stack: **Angular 11, TypeScript, RxJS, NgRx, JWT Auth & RBAC + Java Spring Boot APIs, Karma/Jasmine**. An toàn bảo mật ngân hàng, dynamic reactive forms phức tạp và hiệu năng. |
 | **Kinh nghiệm Angular trước đó** | Kinh nghiệm thực chiến từ **Angular 7+** (Angular 7/8/9) kết hợp Laravel PHP & MySQL RESTful APIs tại Halozend Soft (2018 - 2020). |
 | **UI Systems, Styling & Design** | **Figma to Code**, **CSS Animations & Transitions (60fps)**, **Material UI, Tailwind CSS, Bootstrap, Bulma**, SASS/CSS3, Responsive Web Design, CSS Grid & Flexbox. |
-| **Testing & Modern Ecosystem** | **Next.js** (App Router, SSR/SSG/ISR), **TanStack Query**, **Playwright** (E2E), **Jest**, **React Testing Library**, **Vite**, **Turborepo & pnpm workspaces**. |
+| **Testing & Modern Ecosystem** | **Next.js** (App Router, SSR), **TanStack Query**, **Playwright** (E2E), **Jest**, **React Testing Library**, **Vite**. |
 | **Chứng chỉ quốc tế mới** | Bổ sung 3 chứng chỉ Microsoft chính thức: **Agentic AI Business Solutions Architect Expert**, **Azure AI Apps and Agents Developer Associate**, **GitHub Copilot** bên cạnh Senior React (Udacity) & Senior Angular (Certificates.dev). |
 | **Nguyên tắc bảo mật thông tin** | Sử dụng thuật ngữ tiêu chuẩn công nghiệp (Centralized API Gateway, Microservices). Không đưa mã nguồn nhạy cảm hay tài liệu đề xuất tái thiết kế (redesign proposal) của khách hàng vào CV. |
 
@@ -65,11 +65,11 @@ Dựa trên yêu cầu của bạn, các thông tin đã được chuẩn hóa �
 
 | Nhóm kỹ năng | Chi tiết công nghệ |
 |---|---|
-| **Frontend Engineering** | **React & Next.js** (Hooks, Context API, Performance Optimization, App Router, SSR/SSG/ISR), Reusable Component Architecture, TypeScript (Strict), JavaScript (ES6+), **Angular** (Angular 11, Angular 7+, 8, 9), RxJS Observables, NgRx Store |
+| **Frontend Engineering** | **React & Next.js** (Hooks, Context API, Performance Optimization, App Router, SSR), Reusable Component Architecture, TypeScript (Strict), JavaScript (ES6+), **Angular** (Angular 11, Angular 7+, 8, 9), RxJS Observables, NgRx Store |
 | **State & Data Fetching** | **TanStack Query (React Query)**, Redux Toolkit, Context API, Custom Hooks, Render Profiling & Optimization, Chrome DevTools & Lighthouse |
 | **UI Systems & Design** | **Figma to Code** (Design Token Handoff, Pixel-Perfect Implementation), **CSS Animations & Transitions** (60fps Micro-interactions), **Multilingual UI (i18n / Localization)**, Material UI, Tailwind CSS, Bootstrap, Bulma, SASS/CSS3, Responsive Web Design |
 | **Testing & Quality** | **Jest & React Testing Library** (User-Centric Testing), **MSW (Mock Service Worker)** for network-level API mocking, **Playwright** (E2E Testing), Karma & Jasmine (Angular), Automated CI Test Pipelines, Clean Code |
-| **Build & Tooling** | **Vite** (ESM Dev Server), Webpack Build Pipelines, **Turborepo & pnpm Workspaces**, Git (Feature Branching, Interactive Rebasing, Code Reviews) |
+| **Build & Tooling** | **Vite** (ESM Dev Server), Webpack Build Pipelines, Git (Feature Branching, Interactive Rebasing, Code Reviews) |
 | **Backend & APIs** | **Java Spring Boot** (Spring MVC, Spring Security, Spring Data JPA), RESTful APIs, Hibernate, Contract-First API, CORS, Laravel (PHP), Node.js |
 | **Bảo mật & Danh tính** | SAML 2.0 SSO, Azure Active Directory (Azure AD), OAuth2/OIDC, JWT Bearer Token Security, Role-Based Access Control (RBAC) |
 | **AI & Modern Tooling** | Agentic AI Solutions Architecture, Azure AI Apps & Agents, GitHub Copilot, AI-Augmented Workflows (MCP, AI Rules, Jira Automation) |
